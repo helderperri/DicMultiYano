@@ -380,7 +380,7 @@ if($result = mysqli_query($link, $sql)){
                       
             </div></div>
 
-        
+
         <?php
 include('forms2.php');
 //bottomDic
@@ -395,158 +395,38 @@ include('bottonDic.php');
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/ion.sound.js"></script>
 
-
-   <script>
-
-
-
-    $(document).ready(function(){
-
+<script>
 
 var som1 = document.getElementsByTagName("a")[id='xsuawa'].getAttribute("audio");
-
-
-//Regex to remove 
-var som1b = som1.replace(/\.[^/.]+$/, "");
-
-        ion.sound({
-            sounds: [
-                {name: som1b}
-
-
-		       ],
-            path: "sounds/",
-            preload: false,
-            volume: 1.0
-        });
-
-
-        $("#xsuawa").on("click", function(){
-            ion.sound.play(som1b);
-        });
-
-
-
-    });
-	
-</script>
-
-      <script>
-
-
-
-    $(document).ready(function(){
-
+var xsuawa = new Audio ();
+xsuawa.src = `sounds/${som1}` ;
 
 var som2 = document.getElementsByTagName("a")[id='shberc'].getAttribute("audio");
-
-
-//Regex to remove 
-var som2b = som2.replace(/\.[^/.]+$/, "");
-
-
-        ion.sound({
-            sounds: [{name: som2b}
-
-
-		       ],
-            path: "sounds/",
-            preload: false,
-            volume: 1.0
-        });
-
-
-
-        $("#shberc").on("click", function(){
-            ion.sound.play(som2b);
-        });
-
-
-    });
-	
-</script>
-   <script>
-
-
-
-    $(document).ready(function(){
-
+var shberc = new Audio ();
+shberc.src = `sounds/${som2}` ;
 
 var som3 = document.getElementsByTagName("a")[id='shbbxm'].getAttribute("audio");
-
-
-//Regex to remove 
-var som3b = som3.replace(/\.[^/.]+$/, "");
-
-
-        ion.sound({
-            sounds: [
-                {name: som3b}
-		       ],
-            path: "sounds/",
-            preload: false,
-            volume: 1.0
-        });
-
-
-        $("#shbbxm").on("click", function(){
-            ion.sound.play(som3b);
-        });
-
-
-    });
-	
-</script>
-
-   <script>
-
-
-
-    $(document).ready(function(){
-
-
+var shbbxm = new Audio ();
+shbbxm.src = `sounds/${som3}` ;
 
 var som4 = document.getElementsByTagName("a")[id='wcascc'].getAttribute("audio");
-var som5 = document.getElementsByTagName("a")[id='yropcu'].getAttribute("audio");
-var som6 = document.getElementsByTagName("a")[id='guurai'].getAttribute("audio");
+var wcascc = new Audio ();
+wcascc.src = `sounds/${som4}` ;
 
+var som5 = document.getElementsByTagName("a")[id='yropcu'].getAttribute("audio");
+var yropcu = new Audio ();
+yropcu.src = `sounds/${som5}` ;
+
+var som6 = document.getElementsByTagName("a")[id='guurai'].getAttribute("audio");
+var guurai = new Audio ();
+guurai.src = `sounds/${som6}` ;
 
 //Regex to remove 
-var som4b = som4.replace(/\.[^/.]+$/, "");
-var som5b = som5.replace(/\.[^/.]+$/, "");
-var som6b = som6.replace(/\.[^/.]+$/, "");
+//var som1b = som1.replace(/\.[^/.]+$/, "");
 
-
-        ion.sound({
-            sounds: [
-                {name: som4b},
-	            {name: som5b},
-	            {name: som6b}
-
-
-		       ],
-            path: "sounds/",
-            preload: false,
-            volume: 1.0
-        });
-
-
-
-        $("#wcascc").on("click", function(){
-            ion.sound.play(som4b);
-        });
-		
-		$("#yropcu").on("click", function(){
-            ion.sound.play(som5b);
-        });
-
-		$("#guurai").on("click", function(){
-            ion.sound.play(som6b);
-        });
-
-    });
-	
 </script>
+
+
 
    </body>
 </html>

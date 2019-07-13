@@ -24,12 +24,12 @@ if(mysqli_num_rows($result)!==0){
               
                 $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
-                $word_wav= $row["word_wav"];
+                $word_mp3= $row["word_mp3"];
              }
            
                 ?>
 
-<a id="xsuawa" audio="<?php echo "$word_wav";?>" title="Sanöma de Awaris" alt="Sanöma de Awaris"  style="outline:none;">
+<a id="xsuawa" onMouseDown="xsuawa.play()" audio="<?php echo "$word_mp3";?>" title="Sanöma de Awaris" alt="Sanöma de Awaris"  style="outline:none;">
 
 <path id="xsu_awa" title="Sanöma de Awaris" alt="Sanöma de Awaris" fill-rule="evenodd" clip-rule="evenodd" fill="#C095B1" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M306.46,3.69c2.01,1.61,5.19,2.01,7.99,3.6c1.99,1.2,6.38,5.99,6.38,8c0,0.8,0.4,0,0.4,1.19c0,0.8,2.4,6.39,4.39,9.6
@@ -156,7 +156,7 @@ if(mysqli_num_rows($result)!==0){
          <?php 
 		 unset($word_ver);
 		 unset($word_pho);
-		 unset($word_wav);                   
+		 unset($word_mp3);                   
                    
                    
     
@@ -171,7 +171,7 @@ if(mysqli_num_rows($result)!==0){
               
                 $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
-                $word_wav= $row["word_wav"];
+                $word_mp3= $row["word_mp3"];
            
 }
            
@@ -180,7 +180,7 @@ if(mysqli_num_rows($result)!==0){
 <!--
 <a xlink:href="#wcasccModal" title="Yanomami das Serras Central" alt="Yanomami das Serras Central" href='#wcasccModal' data-toggle='modal' style="outline:none;">
 -->
-<a id="wcascc" audio="<?php echo "$word_wav" ;?>" title="Yanomami das Serras Central" alt="Yanomami das Serras Central" style="outline:none;">
+<a id="wcascc" onMouseDown="wcascc.play()" audio="<?php echo "$word_mp3" ;?>" title="Yanomami das Serras Central" alt="Yanomami das Serras Central" style="outline:none;">
 
 <path id="wca_srr" title="Yanomami das Serras Central" alt="Yanomami das Serras Central" fill-rule="evenodd" clip-rule="evenodd" fill="#9FAA82" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M515.19,182.42c3.2,1.59,7.57,0.8,10.77,1.19l15.96-1.99c3.2,0.4,6.4,0.8,9.18,1.2c1.21,3.6,1.21,7.6,2.8,11.19
@@ -352,7 +352,7 @@ if(mysqli_num_rows($result)!==0){
          <?php 
 		 unset($word_ver);                   
 		 unset($word_pho);                   
-		 unset($word_wav);                   
+		 unset($word_mp3);                   
     
          			$sql = "SELECT * FROM word_guu_rai  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
          
@@ -365,7 +365,7 @@ if(mysqli_num_rows($result)!==0){
               
                 $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
-                $word_wav= $row["word_wav"];
+                $word_mp3= $row["word_mp3"];
            
 }
            
@@ -373,7 +373,7 @@ if(mysqli_num_rows($result)!==0){
 
 <!-- <a xlink:href="#guuoesModal" title="Yanomamɨ ou Yanonami do Oeste" alt="Yanomamɨ ou Yanonami do Oeste" href='#guuoesModal' data-toggle='modal' style="outline:none;">
 -->
-<a id="guurai" audio="<?php echo "$word_wav";?>" title="Yanomamɨ ou Yanonami do Oeste" alt="Yanomamɨ ou Yanonami do Oeste" style="outline:none;">
+<a id="guurai" onMouseDown="guurai.play()" audio="<?php echo "$word_mp3";?>" title="Yanomamɨ ou Yanonami do Oeste" alt="Yanomamɨ ou Yanonami do Oeste" style="outline:none;">
 
 <path id="guu_oes1" title="Yanomamɨ ou Yanonami do Oeste" alt="Yanomamɨ ou Yanonami do Oeste" fill-rule="evenodd" clip-rule="evenodd" fill="#D5BE9C" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M503.9,504.44c7.61,1.6,16.03,0,23.63,4.82c0,7.22,1.62,15.26,3.62,22.88c-3.62,2.42-6.01,0.82-6.01,5.24c0,0.8,1.6,6.82,1.6,7.62
@@ -581,7 +581,7 @@ if(mysqli_num_rows($result)!==0){
          <?php 
 		 unset($word_ver);
 		 unset($word_pho);
-		 unset($word_wav);                   
+		 unset($word_mp3);                   
                        
                        
     
@@ -596,7 +596,7 @@ if(mysqli_num_rows($result)!==0){
               
             $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
-                $word_wav= $row["word_wav"];
+                $word_mp3= $row["word_mp3"];
 }
            
                 ?>
@@ -604,7 +604,7 @@ if(mysqli_num_rows($result)!==0){
 
 <!-- <a xlink:href="#shbnorModal" title="Ninam do Norte (Xiriana)" alt="Ninam do Norte (Xiriana)" href='#shbnorModal' data-toggle='modal' style="outline:none;"> 
 -->
-<a id="shberc" audio="<?php echo "$word_wav"; ?>" title="Ninam do Norte (Xiriana)" alt="Ninam do Norte (Xiriana)" style="outline:none;">
+<a id="shberc" onMouseDown="shberc.play()" audio="<?php echo "$word_mp3"; ?>" title="Ninam do Norte (Xiriana)" alt="Ninam do Norte (Xiriana)" style="outline:none;">
 
      
 <path id="shb_nor" title="Ninam do Norte (Xiriana)" alt="Ninam do Norte (Xiriana)" fill-rule="evenodd" clip-rule="evenodd" fill="#94A7B6" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
@@ -681,7 +681,7 @@ if(mysqli_num_rows($result)!==0){
          <?php 
 		 unset($word_ver);
 		 unset($word_pho);
-		 unset($word_wav);                   
+		 unset($word_mp3);                   
                    
     
          			$sql = "SELECT * FROM word_shb_bxm  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
@@ -695,7 +695,7 @@ if(mysqli_num_rows($result)!==0){
               
                 $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];	    
-				$word_wav= $row["word_wav"];
+				$word_mp3= $row["word_mp3"];
            
 }
            
@@ -703,7 +703,7 @@ if(mysqli_num_rows($result)!==0){
 
 <!-- <a xlink:href="#shbsulModal" title="Ninam do Sul" alt="Ninam do Sul" href='#shbsulModal' data-toggle='modal' style="outline:none;">
   -->    
-<a id="shbbxm" audio="<?php echo "$word_wav"; ?>" title="Ninam do Sul" alt="Ninam do Sul" style="outline:none;">
+<a id="shbbxm" onMouseDown="shbbxm.play()" audio="<?php echo "$word_mp3"; ?>" title="Ninam do Sul" alt="Ninam do Sul" style="outline:none;">
       
 
 <path id="shb_sul" title="Ninam do Sul" alt="Ninam do Sul" fill-rule="evenodd" clip-rule="evenodd" fill="#A4B6C4" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
@@ -777,8 +777,8 @@ if(mysqli_num_rows($result)!==0){
     </a>
          <?php 
 		 unset($word_ver);                   
-		 unset($word_ver);                   
-		 unset($word_ver);                   
+		 unset($word_pho);                   
+		 unset($word_mp3);                   
     
          			$sql = "SELECT * FROM word_yro_pcu  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
          
@@ -791,7 +791,7 @@ if(mysqli_num_rows($result)!==0){
               
                 $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
-                $word_wav= $row["word_wav"];
+                $word_mp3= $row["word_mp3"];
            
 }
            
@@ -801,7 +801,7 @@ if(mysqli_num_rows($result)!==0){
 <a xlink:href="#yropcuModal" title="Ỹaroamë da Serra do Pacu" alt="Ỹaroamë da Serra do Pacu" href='#yropcuModal' data-toggle='modal' style="outline:none;">      
 
 -->
-<a id="yropcu" audio="<?php echo "$word_wav"; ?>" title="Ỹaroamë da Serra do Pacu" alt="Ỹaroamë da Serra do Pacu" style="outline:none;">      
+<a id="yropcu" onMouseDown="yropcu.play()" audio="<?php echo "$word_mp3"; ?>" title="Ỹaroamë da Serra do Pacu" alt="Ỹaroamë da Serra do Pacu" style="outline:none;">      
 
 <path id="yro_pcu" title="Ỹaroamë da Serra do Pacu" alt="Ỹaroamë da Serra do Pacu" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFBB2" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M775.4,397.13c5.19,5.59,6.79,14.4,8.78,22.38c2.39,8.8,0,19.19,3.99,27.59c3.18,6.79,17.16,16.39,17.16,17.2
