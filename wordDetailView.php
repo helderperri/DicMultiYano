@@ -102,7 +102,7 @@ $link->set_charset("utf8");
     
     
 ?>           
-        <div class='col-sm-offset-0 col-sm-4 containingDiv'>
+        <div class='col-sm-offset-0 col-sm-4 containingDiv'">
             
             <div style='position: fixed;  top: 48px; z-index:1;'>         
 
@@ -129,8 +129,8 @@ $link->set_charset("utf8");
             <div class="row" id='tableRsult' name='tableRsult' class='table table-hover stable-condensed' style="width: auto;">
                   <!--  style='position: fixed;  top: 48px;'> margin-top:38px; margin-bottom:48px; margin-left:150px; -->
         
-                    <div class="col-xs-3 col-md-5" style=" margin-top:220px; position:fixed; z-index:1; ">
-                        <div class="pre-scrollable" style="width: 260px; height: 210px;">
+                    <div class="col-xs-3 col-md-5" style=" margin-top:220px; position:fixed; z-index:1;">
+                        <div class="pre-scrollable" style="width: 260px; height: 210px;  padding-bottom:48px;">
              
              <?php          
                             
@@ -269,21 +269,20 @@ if($result = mysqli_query($link, $sql)){
 
                     <h1>Dicion&#225;rio Mutil&#237;ngue<br> Yanomami</h1>  
                 
-        <div style='width:368px; margin-bottom:6px; display: inline-block; float:left; z-index:1;'>      
+    <div style='width:368px; margin-bottom:6px; display: inline-block; float:left; z-index:1;'>      
               
 
-                         <button style='float:left; z-index:1;' onclick="window.location = ('searchSemanticView.php?sd=animais')" class="btn btn-info btn-sm" value='Animais'>Animais</button>
-                            <button style='float:left; z-index:1;' onclick="window.location = ('searchSemanticView.php?sd=plantas')" class="btn btn-info btn-sm" value='Plantas'>Plantas</button>
-                            <button style='float:left; z-index:1;' onclick="window.location = ('searchSemanticView.php?sd=manufaturas')" class="btn btn-info btn-sm" value='Manufatura'>Manufatura</button>
-                            <button style='float:left; z-index:1;' onclick="window.location = ('searchSemanticView.php?sd=natureza')" class="btn btn-info btn-sm" value='natureza'>Natureza</button>
-                            <button style='float:left; z-index:1;' onclick="window.location = ('searchSemanticView.php?sd=parentesco')" class="btn btn-info btn-sm" value='parentesco'>Parentesco</button>
-                            <button style='float:left; z-index:1;' onclick="window.location = ('searchSemanticView.php?sd=partes do corpo')" class="btn btn-info btn-sm" value='corpo'>Corpo</button>
-                            <button style='float:left;' href="searchSemanticView.php?sd=adjetivais" class="btn btn-info btn-sm" value="Adjetivais">Adjetivais</button>
-                            <button style='float:left; z-index:1;' onclick="window.location = ('searchSemanticView.php?sd=verbos intransitivos')" class="btn btn-info btn-sm">Intransitivos</button>
-                            <button style='float:left; z-index:1;' onclick="window.location = ('searchSemanticView.php?sd=verbos transitivos')" class="btn btn-info btn-sm">Transitivos</button>
-                            <button style='float:left;' onclick="window.location = ('searchAlphabeticView.php?letter=a')" class="btn btn-success btn-sm">AaBbCc</button>
-                        
-              
+                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=animais')" class="btn btn-info btn-sm" value='Animais'>Animais</button>
+                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=plantas')" class="btn btn-info btn-sm" value='Plantas'>Plantas</button>
+                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=manufaturas')" class="btn btn-info btn-sm" value='Manufatura'>Manufatura</button>
+                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=natureza')" class="btn btn-info btn-sm" value='natureza'>Natureza</button>
+                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=parentesco')" class="btn btn-info btn-sm" value='parentesco'>Parentesco</button>
+                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=partes do corpo')" class="btn btn-info btn-sm" value='corpo'>Corpo</button>
+                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=adjetivais')" class="btn btn-info btn-sm" value='adjetivais'>Adjetivais</button>
+                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=verbos intransitivos')" class="btn btn-info btn-sm">Intransitivos</button>
+                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=verbos transitivos')" class="btn btn-info btn-sm">Transitivos</button>
+                            
+                            <button style='float:left; width:92px;' onclick="window.location = ('searchAlphabeticView.php?letter=a')" class="btn btn-success btn-sm">AaBbCc</button>    
 
             </div>   
 
@@ -371,13 +370,16 @@ if($result = mysqli_query($link, $sql)){
                 
 
                 
-                <!-- incluir div com mapa dos dialetos e línguas Yanomami -->
-             
+             <!-- incluir div com mapa dos dialetos e línguas Yanomami -->
+
+
+	             
 </div>            
+
             
                       
             </div></div>
-    
+
         
         <?php
 include('forms2.php');
@@ -385,9 +387,166 @@ include('forms2.php');
 include('bottonDic.php');
 ?>
 
-        <script src="js/bootstrap.min.js"></script>
+
+
+           <script src="js/bootstrap.min.js"></script>
 		<script src="js/bootstrap.js"></script>
        	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-          
-</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/ion.sound.js"></script>
+
+
+   <script>
+
+
+
+    $(document).ready(function(){
+
+
+var som1 = document.getElementsByTagName("a")[id='xsuawa'].getAttribute("audio");
+
+
+//Regex to remove 
+var som1b = som1.replace(/\.[^/.]+$/, "");
+
+        ion.sound({
+            sounds: [
+                {name: som1b}
+
+
+		       ],
+            path: "sounds/",
+            preload: false,
+            volume: 1.0
+        });
+
+
+        $("#xsuawa").on("click", function(){
+            ion.sound.play(som1b);
+        });
+
+
+
+    });
+	
+</script>
+
+      <script>
+
+
+
+    $(document).ready(function(){
+
+
+var som2 = document.getElementsByTagName("a")[id='shberc'].getAttribute("audio");
+
+
+//Regex to remove 
+var som2b = som2.replace(/\.[^/.]+$/, "");
+
+
+        ion.sound({
+            sounds: [{name: som2b}
+
+
+		       ],
+            path: "sounds/",
+            preload: false,
+            volume: 1.0
+        });
+
+
+
+        $("#shberc").on("click", function(){
+            ion.sound.play(som2b);
+        });
+
+
+    });
+	
+</script>
+   <script>
+
+
+
+    $(document).ready(function(){
+
+
+var som3 = document.getElementsByTagName("a")[id='shbbxm'].getAttribute("audio");
+
+
+//Regex to remove 
+var som3b = som3.replace(/\.[^/.]+$/, "");
+
+
+        ion.sound({
+            sounds: [
+                {name: som3b}
+		       ],
+            path: "sounds/",
+            preload: false,
+            volume: 1.0
+        });
+
+
+        $("#shbbxm").on("click", function(){
+            ion.sound.play(som3b);
+        });
+
+
+    });
+	
+</script>
+
+   <script>
+
+
+
+    $(document).ready(function(){
+
+
+
+var som4 = document.getElementsByTagName("a")[id='wcascc'].getAttribute("audio");
+var som5 = document.getElementsByTagName("a")[id='yropcu'].getAttribute("audio");
+var som6 = document.getElementsByTagName("a")[id='guurai'].getAttribute("audio");
+
+
+//Regex to remove 
+var som4b = som4.replace(/\.[^/.]+$/, "");
+var som5b = som5.replace(/\.[^/.]+$/, "");
+var som6b = som6.replace(/\.[^/.]+$/, "");
+
+
+        ion.sound({
+            sounds: [
+                {name: som4b},
+	            {name: som5b},
+	            {name: som6b}
+
+
+		       ],
+            path: "sounds/",
+            preload: false,
+            volume: 1.0
+        });
+
+
+
+        $("#wcascc").on("click", function(){
+            ion.sound.play(som4b);
+        });
+		
+		$("#yropcu").on("click", function(){
+            ion.sound.play(som5b);
+        });
+
+		$("#guurai").on("click", function(){
+            ion.sound.play(som6b);
+        });
+
+    });
+	
+</script>
+
+   </body>
 </html>

@@ -1323,7 +1323,7 @@ Sanöma              </h4>
 
       <form method="post" id="xsuara">
 
-        <div class="modal" id="xsuaraModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div id="xsuaraModal" class="modal"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
             <div class="modal-dialog">
 
@@ -1395,7 +1395,7 @@ Sanöma do Aracaçá              </h4>
 
       <form method="post" id="xsuhok">
 
-        <div class="modal" id="xsuhokModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal"  id="xsuhokModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
             <div class="modal-dialog">
 

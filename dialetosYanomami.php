@@ -8,7 +8,8 @@ transform="translate(-140.31946, -267.08233)"-->
     <g>
     
 
-<a xlink:href="#xsuawaModal" title="Sanöma de Awaris" alt="Sanöma de Awaris" href='#xsuawaModal' data-toggle='modal' style="outline:none;">
+<!-- <a id="b01" sound="beer_can_opening.mp3" title="Sanöma de Awaris" alt="Sanöma de Awaris"  style="outline:none;" data-toggle='modal' xlink:href="#xsuawaModal" href="#xsuawaModal" >
+-->
       
          <?php unset($word_ver);                   
     
@@ -23,11 +24,12 @@ if(mysqli_num_rows($result)!==0){
               
                 $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
-           
-}
+                $word_wav= $row["word_wav"];
+             }
            
                 ?>
 
+<a id="xsuawa" audio="<?php echo "$word_wav";?>" title="Sanöma de Awaris" alt="Sanöma de Awaris"  style="outline:none;">
 
 <path id="xsu_awa" title="Sanöma de Awaris" alt="Sanöma de Awaris" fill-rule="evenodd" clip-rule="evenodd" fill="#C095B1" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M306.46,3.69c2.01,1.61,5.19,2.01,7.99,3.6c1.99,1.2,6.38,5.99,6.38,8c0,0.8,0.4,0,0.4,1.19c0,0.8,2.4,6.39,4.39,9.6
@@ -57,9 +59,12 @@ if(mysqli_num_rows($result)!==0){
     </a>
 
 
-    <a xlink:href="#xsuaraModal" title="Sanöma de Aracaçá" alt="Sanöma de Aracaçá" href="#xsuaraModal" data-toggle='modal' style="outline:none;">
+    <a id="xsuara" xlink:href="#xsuaraModal" title="Sanöma de Aracaçá" alt="Sanöma de Aracaçá" href="#xsuaraModal" data-toggle='modal' style="outline:none;">
     
-         <?php unset($word_ver);                   
+         <?php 
+		 unset($word_ver);
+		 unset($word_pho);
+		 unset($word_wav);                                    			                   
     
          			$sql = "SELECT * FROM word_xsu_ara  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
          
@@ -147,9 +152,13 @@ if(mysqli_num_rows($result)!==0){
 <text id="word_wca_nor" x="450" y="132"><?php echo "$word_ver"; ?></text>
 
     </a>
-<a xlink:href="#wcasccModal" title="Yanomami das Serras Central" alt="Yanomami das Serras Central" href='#wcasccModal' data-toggle='modal' style="outline:none;">
       
-         <?php unset($word_ver);                   
+         <?php 
+		 unset($word_ver);
+		 unset($word_pho);
+		 unset($word_wav);                   
+                   
+                   
     
          			$sql = "SELECT * FROM word_wca_scc  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
          
@@ -162,10 +171,16 @@ if(mysqli_num_rows($result)!==0){
               
                 $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
+                $word_wav= $row["word_wav"];
            
 }
            
                 ?>
+
+<!--
+<a xlink:href="#wcasccModal" title="Yanomami das Serras Central" alt="Yanomami das Serras Central" href='#wcasccModal' data-toggle='modal' style="outline:none;">
+-->
+<a id="wcascc" audio="<?php echo "$word_wav" ;?>" title="Yanomami das Serras Central" alt="Yanomami das Serras Central" style="outline:none;">
 
 <path id="wca_srr" title="Yanomami das Serras Central" alt="Yanomami das Serras Central" fill-rule="evenodd" clip-rule="evenodd" fill="#9FAA82" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M515.19,182.42c3.2,1.59,7.57,0.8,10.77,1.19l15.96-1.99c3.2,0.4,6.4,0.8,9.18,1.2c1.21,3.6,1.21,7.6,2.8,11.19
@@ -333,9 +348,11 @@ if(mysqli_num_rows($result)!==0){
                 ?>
     <text id="word_wca_dem" x="530" y="490"><?php echo "$word_ver"; ?></text>
     </a> 
-<a xlink:href="#guuoesModal" title="Yanomamɨ ou Yanonami do Oeste" alt="Yanomamɨ ou Yanonami do Oeste" href='#guuoesModal' data-toggle='modal' style="outline:none;">
       
-         <?php unset($word_ver);                   
+         <?php 
+		 unset($word_ver);                   
+		 unset($word_pho);                   
+		 unset($word_wav);                   
     
          			$sql = "SELECT * FROM word_guu_rai  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
          
@@ -348,10 +365,15 @@ if(mysqli_num_rows($result)!==0){
               
                 $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
+                $word_wav= $row["word_wav"];
            
 }
            
                 ?>
+
+<!-- <a xlink:href="#guuoesModal" title="Yanomamɨ ou Yanonami do Oeste" alt="Yanomamɨ ou Yanonami do Oeste" href='#guuoesModal' data-toggle='modal' style="outline:none;">
+-->
+<a id="guurai" audio="<?php echo "$word_wav";?>" title="Yanomamɨ ou Yanonami do Oeste" alt="Yanomamɨ ou Yanonami do Oeste" style="outline:none;">
 
 <path id="guu_oes1" title="Yanomamɨ ou Yanonami do Oeste" alt="Yanomamɨ ou Yanonami do Oeste" fill-rule="evenodd" clip-rule="evenodd" fill="#D5BE9C" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M503.9,504.44c7.61,1.6,16.03,0,23.63,4.82c0,7.22,1.62,15.26,3.62,22.88c-3.62,2.42-6.01,0.82-6.01,5.24c0,0.8,1.6,6.82,1.6,7.62
@@ -556,9 +578,12 @@ if(mysqli_num_rows($result)!==0){
 	c0.4,0,0.4,0.4,1.21,0.4c0.79,0,1.19-1.59,1.99-2.79c0.4-0.4,1.19-0.81,1.19-1.21C435.38,298.37,436.97,300.37,438.95,301.96z"/>
 
     </a>
-<a xlink:href="#shbnorModal" title="Ninam do Norte (Xiriana)" alt="Ninam do Norte (Xiriana)" href='#shbnorModal' data-toggle='modal' style="outline:none;">
-      
-         <?php unset($word_ver);                   
+         <?php 
+		 unset($word_ver);
+		 unset($word_pho);
+		 unset($word_wav);                   
+                       
+                       
     
          			$sql = "SELECT * FROM word_shb_erc  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
          
@@ -569,13 +594,19 @@ if(mysqli_num_rows($result)!==0){
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                     
               
-                $word_ver= $row["word_ver"];
+            $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
-           
+                $word_wav= $row["word_wav"];
 }
            
                 ?>
 
+
+<!-- <a xlink:href="#shbnorModal" title="Ninam do Norte (Xiriana)" alt="Ninam do Norte (Xiriana)" href='#shbnorModal' data-toggle='modal' style="outline:none;"> 
+-->
+<a id="shberc" audio="<?php echo "$word_wav"; ?>" title="Ninam do Norte (Xiriana)" alt="Ninam do Norte (Xiriana)" style="outline:none;">
+
+     
 <path id="shb_nor" title="Ninam do Norte (Xiriana)" alt="Ninam do Norte (Xiriana)" fill-rule="evenodd" clip-rule="evenodd" fill="#94A7B6" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M717.52,20.09c0,0.4,1.21,0,2,0c1.19,1.2,1.99,2.39,3.18,2.39c0.81,0,1.21-0.4,1.21-0.8c1.2,2.01,4.39,5.6,5.19,5.6
 	c1.19,0,1.19-1.2,1.99-1.2c1.2,0,0.79,0.8,2,0.8c0.8,0,1.59-0.8,2.39-0.8c1.2,0,1.99,2.41,3.2,2.41c0.8,0,0-0.81,1.19-0.81
@@ -611,9 +642,11 @@ if(mysqli_num_rows($result)!==0){
 <text id="word_shb_erc" x="660" y="85"><?php echo "$word_ver"; ?></text>
 
     </a>
-<a xlink:href="#shbcenModal" title="Ninam Central" alt="Ninam Central" href='#shbcenModal' data-toggle='modal' style="outline:none;">
       
-         <?php unset($word_ver);                   
+         <?php 
+		 unset($word_ver);
+		 unset($word_pho);
+		 unset($word_wav);                   
     
          			$sql = "SELECT * FROM word_shb_cen  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
          
@@ -626,10 +659,13 @@ if(mysqli_num_rows($result)!==0){
               
                 $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
+				$word_wav= $row["word_wav"];
            
 }
            
                 ?>
+
+<a xlink:href="#shbcenModal" title="Ninam Central" alt="Ninam Central" href='#shbcenModal' data-toggle='modal' style="outline:none;">
 
 <path id="shb_cen" title="Ninam Central" alt="Ninam Central" fill-rule="evenodd" clip-rule="evenodd" fill="#818F9A" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M733.1,165.63c7.97,2.39,17.15,1.59,25.54,1.99l2.38,9.6c0.4,0.4,2.01,1.2,2.01,1.99c0,1.21-0.81,1.21-0.81,2.01
@@ -642,9 +678,11 @@ if(mysqli_num_rows($result)!==0){
 <text id="word_shb_cen" x="720" y="210"><?php echo "$word_ver"; ?></text>
 
     </a>
-<a xlink:href="#shbsulModal" title="Ninam do Sul" alt="Ninam do Sul" href='#shbsulModal' data-toggle='modal' style="outline:none;">
-      
-         <?php unset($word_ver);                   
+         <?php 
+		 unset($word_ver);
+		 unset($word_pho);
+		 unset($word_wav);                   
+                   
     
          			$sql = "SELECT * FROM word_shb_bxm  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
          
@@ -656,11 +694,17 @@ if(mysqli_num_rows($result)!==0){
                     
               
                 $word_ver= $row["word_ver"];
-                $word_pho= $row["word_pho"];
+                $word_pho= $row["word_pho"];	    
+				$word_wav= $row["word_wav"];
            
 }
            
                 ?>
+
+<!-- <a xlink:href="#shbsulModal" title="Ninam do Sul" alt="Ninam do Sul" href='#shbsulModal' data-toggle='modal' style="outline:none;">
+  -->    
+<a id="shbbxm" audio="<?php echo "$word_wav"; ?>" title="Ninam do Sul" alt="Ninam do Sul" style="outline:none;">
+      
 
 <path id="shb_sul" title="Ninam do Sul" alt="Ninam do Sul" fill-rule="evenodd" clip-rule="evenodd" fill="#A4B6C4" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M718.32,242.79c3.2,4.4,6.8,9.2,11.58,11.61c5.58,3.19,17.97,3.19,19.16,3.19c8.79,0,53.08-8.38,54.27-8.38
@@ -673,9 +717,11 @@ if(mysqli_num_rows($result)!==0){
 <text id="word_shb_bxm" x="670" y="285"><?php echo "$word_ver"; ?></text>
 
     </a>
-<a xlink:href="#yroajaModal" title="Ỹaroamë do Ajarani e Apiaú" alt="Ỹaroamë do Ajarani e Apiaú" href='#yroajaModal' data-toggle='modal' style="outline:none;">
       
-         <?php unset($word_ver);                   
+         <?php 
+		 unset($word_ver);                   
+		 unset($word_pho);                   
+		 unset($word_wav);                   
     
          			$sql = "SELECT * FROM word_yro_aja  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
          
@@ -688,10 +734,14 @@ if(mysqli_num_rows($result)!==0){
               
                 $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
+                $word_wav= $row["word_wav"];
            
 }
            
                 ?>
+
+<a xlink:href="#yroajaModal" title="Ỹaroamë do Ajarani e Apiaú" alt="Ỹaroamë do Ajarani e Apiaú" href='#yroajaModal' data-toggle='modal' style="outline:none;">
+
 
 <path id="yro_aja" title="Ỹaroamë do Ajarani e Apiaú" alt="Ỹaroamë do Ajarani e Apiaú" fill-rule="evenodd" clip-rule="evenodd" fill="#E4E57F" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M822.89,290.77c0,1.19-2.8,11.59-2.8,12.8c0,2.39,8.39,5.99,8.39,9.2c0,0.8-1.19,2.39-1.99,2.39c-1.21,0-3.2-0.8-4.39-0.8
@@ -725,8 +775,10 @@ if(mysqli_num_rows($result)!==0){
 <text id="word_yro_aja" x="730" y="370"><?php echo "$word_ver"; ?></text>
 
     </a>
-<a xlink:href="#yropcuModal" title="Ỹaroamë da Serra do Pacu" alt="Ỹaroamë da Serra do Pacu" href='#yropcuModal' data-toggle='modal' style="outline:none;">      
-         <?php unset($word_ver);                   
+         <?php 
+		 unset($word_ver);                   
+		 unset($word_ver);                   
+		 unset($word_ver);                   
     
          			$sql = "SELECT * FROM word_yro_pcu  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
          
@@ -739,10 +791,17 @@ if(mysqli_num_rows($result)!==0){
               
                 $word_ver= $row["word_ver"];
                 $word_pho= $row["word_pho"];
+                $word_wav= $row["word_wav"];
            
 }
            
                 ?>
+
+<!--
+<a xlink:href="#yropcuModal" title="Ỹaroamë da Serra do Pacu" alt="Ỹaroamë da Serra do Pacu" href='#yropcuModal' data-toggle='modal' style="outline:none;">      
+
+-->
+<a id="yropcu" audio="<?php echo "$word_wav"; ?>" title="Ỹaroamë da Serra do Pacu" alt="Ỹaroamë da Serra do Pacu" style="outline:none;">      
 
 <path id="yro_pcu" title="Ỹaroamë da Serra do Pacu" alt="Ỹaroamë da Serra do Pacu" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFBB2" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M775.4,397.13c5.19,5.59,6.79,14.4,8.78,22.38c2.39,8.8,0,19.19,3.99,27.59c3.18,6.79,17.16,16.39,17.16,17.2
@@ -755,7 +814,6 @@ if(mysqli_num_rows($result)!==0){
 
     </a>
 <a xlink:href="#ynobxcModal" title="Yãnoma do Baixo Catrimani" alt="Yãnoma do Baixo Catrimani" href='#ynobxcModal' data-toggle='modal' style="outline:none;">
-      
          <?php unset($word_ver);                   
     
          			$sql = "SELECT * FROM word_yno_bxc  WHERE word_id = '$PHPprotectV23' AND word_ver IS NOT NULL ORDER BY word_id";
@@ -790,7 +848,7 @@ if(mysqli_num_rows($result)!==0){
 <text id="word_yno_bxc" x="710" y="520"><?php echo "$word_ver"; ?></text>
 
     </a>
-<a xlink:href="#yekModal" title="Ye'kuana" alt="Ye'kuana" href='#yekModal' data-toggle='modal' style="outline:none;">
+<a  xlink:href="#yekModal" title="Ye'kuana" alt="Ye'kuana" href='#yekModal' data-toggle='modal' style="outline:none;">
       
          <?php unset($word_ver);                   
     
@@ -810,7 +868,7 @@ if(mysqli_num_rows($result)!==0){
            
                 ?>
 
-<path id="yek" title="Ye'kuana" alt="Ye'kuana" fill-rule="evenodd" clip-rule="evenodd" fill="#CDCCCC" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+<path id="b01" title="Ye'kuana" alt="Ye'kuana" fill-rule="evenodd" clip-rule="evenodd" fill="#CDCCCC" stroke="#FFFFFF" stroke-width="0.2408" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M547.52,56.87c0.4,0.4,1.59,0.8,2.38,0.8c0.4,0,0.4,0.42,1.59,0.42c0.81,0,6.4,0,6.4-1.21c0-0.8-0.8-1.2-0.8-1.99
 	c0,0,0.4-0.4,0.4-0.8c1.2,0.4,2.39,1.2,3.58,1.99c0.4,0,0.79,1.2,0.79,2.01c0.42,0.4,0,0.4,1.21,0.4c0.79,0,2.39-0.81,3.18-0.81
 	c1.21,0,0.81,0.81,2,0.81c1.99,0.8,4.79,0.8,7.18,0.8c-0.79,1.59-1.19,3.6-1.99,5.2c-0.4,1.19-3.2,5.99-3.2,8
@@ -826,6 +884,10 @@ if(mysqli_num_rows($result)!==0){
 	
     <text id="word_yek" x="550" y="110"><?php echo "$word_ver"; ?></text>
     </a>
+	
+
+	
+	
 	<use xlink:href="#word_xsu_awa"/>
 	<use xlink:href="#word_xsu_ara"/>
 	<use xlink:href="#word_xsu_hok"/>
@@ -846,9 +908,12 @@ if(mysqli_num_rows($result)!==0){
 	<use xlink:href="#word_yro_pcu"/>
 	<use xlink:href="#word_yno_bxc"/>
 	<use xlink:href="#word_yek"/>
-	
+
+
+
   </g>
-        
+    
+	    
 </svg>
     
             </div>  
