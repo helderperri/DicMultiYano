@@ -3,11 +3,11 @@
 
 var word_id = document.getElementById("word_id").textContent;
 //var word_adj = word_id-3
+//var scroll = document.getElementsByClassName("pre-scrollable")
 var word_sel = document.getElementById(word_id);
-word_sel.scrollIntoView();
+word_sel.scrollIntoViewIfNeeded();
 //element.scrollIntoView();
-
-var a = word_sel.scrollTop;
+//word_sel.scrollIntoView();
 
 // Sanöma
 var xsuawamp3file = $("#xsuawa").attr("audio");

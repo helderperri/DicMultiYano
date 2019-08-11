@@ -5,20 +5,101 @@ html{
 
 /*Background Image*/
 body{
-    font-family: Arvo, serif;
+    font-family: 'Arvo', serif;
+}
+
+
+/*.lingua:hover {
+        opacity: 0.8;
+}
+
+.lingua span:hover {
+  color: gray;
+}
+
+.dialeto span:hover {
+  color: gray;
+}
+
+.lingua span {
+  color: black;
+}
+
+.dialeto span {
+  color: black;
+}
+
+.dialeto:hover {
+  color: #C9C9C9
+        opacity: 0.8;
 }
 
 path:hover{
         opacity: 0.8;}
+*/
+a.lingua span{
+  min-height: auto;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  color: black;
+  min-width: auto;
+}
+a.dialeto span{
+  min-height: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: black;
+  min-width: auto;
+}
+
+a.lingua {
+  min-height: auto;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  width: 0px;
+  line-height: 1.1em;
+}
+a.dialeto {
+  min-height: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 0px;
+  line-height: 1.1em;
+}
 
 #tableRsult{
     width: auto;
-    font-family: Arvo, serif;
+    font-family: 'Arvo', serif;
   /*  background: url("diversidade_yanomami.png") no-repeat center center;
   /* background-attachment: fixed;*/
     background-size: contain;
 }
 
+/*div.pre-scrollable a:hover{
+  background-color: blue;
+  color: white;
+}
+*/
+
+a.list-group-item {
+  color: blue;
+      margin-top:0px;
+      margin-bottom: 0px;
+    border-width:0px;
+    align-content: center;
+    padding: 0px;
+
+
+}
+
+a.list-group-item:first-child {
+  color: blue;
+    margin-top:0px;
+    margin-bottom: 0px;
+    border-width:0px;
+    padding: 0px;
+
+}
 
 .glyphicon {
     font-size-adjust: auto;
@@ -36,11 +117,13 @@ path:hover{
 
 
 #container{
-            margin-top:120px;   
+            margin-top:120px;
         }
 
 
-
+text {
+  font-size: 1em;
+}
 
 
 
@@ -61,27 +144,27 @@ path:hover{
 
 /*buttons*/
 .signup{
-    margin-top: 50px;   
+    margin-top: 50px;
 }
 .entrar{
-    margin-top: 50px;   
+    margin-top: 50px;
 }
 
 
 .blue{
-    background-color: rgba(186, 64, 27,0.8);   
+    background-color: rgba(186, 64, 27,0.8);
 }
 
 .blue:hover{
-    background-color: rgb(186, 64, 27);   
+    background-color: rgb(186, 64, 27);
 }
 
 .green{
-    background-color: rgba(226, 80, 36,0.8);   
+    background-color: rgba(226, 80, 36,0.8);
 }
 
 .green:hover{
-    background-color: rgb(226, 80, 36);   
+    background-color: rgb(226, 80, 36);
 }
 
 
@@ -237,5 +320,3 @@ path:hover{
     from {transform:scale(0)}
     to {transform:scale(1)}
 }
-
-

@@ -85,301 +85,24 @@ $link->set_charset("utf8");
 
   <?php include('navView.php');?>
 
-<div class='container-fluid' style='width: auto; margin-top:36px; margin-bottom:48px;'>
-
-    <div class='row' >
-
-
-
-        <div class='col-sm-offset-0 col-sm-4'>
-
-    <div style='position: fixed;  top: 48px; z-index:1;'>
-
-            <h1>Dicion&#225;rio Mutil&#237;ngue<br> Yanomami</h1>
-
-
-
-
-        <div style='width:368px; margin-bottom:6px; display: inline-block; float:left; z-index:1;'>
-
-
-                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=animais')" class="btn btn-info btn-sm" value='Animais'>Animais</button>
-                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=plantas')" class="btn btn-info btn-sm" value='Plantas'>Plantas</button>
-                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=manufaturas')" class="btn btn-info btn-sm" value='Manufatura'>Manufatura</button>
-                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=natureza')" class="btn btn-info btn-sm" value='natureza'>Natureza</button>
-                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=parentesco')" class="btn btn-info btn-sm" value='parentesco'>Parentesco</button>
-                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=partes do corpo')" class="btn btn-info btn-sm" value='corpo'>Corpo</button>
-                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=adjetivais')" class="btn btn-info btn-sm" value='adjetivais'>Adjetivais</button>
-                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=verbos intransitivos')" class="btn btn-info btn-sm">Intransitivos</button>
-                            <button style='float:left; z-index:1; width:92px;' onclick="window.location = ('searchSemanticView.php?sd=verbos transitivos')" class="btn btn-info btn-sm">Transitivos</button>
-
-                            <button style='float:left; width:92px;' onclick="window.location = ('searchAlphabeticView.php?letter=a')" class="btn btn-success btn-sm">AaBbCc</button>
-
-            </div>
-
-
-
-
-
-            </div>
-
-
-
-  <?php
-
-
-
-//$PHPprotectV22 = "";
-
-$PHPprotectV23 = $_GET['wordID'];
-
-
-
-//if(isset($_GET['wordID']) && strlen($_GET['wordID']) == 1)
-
-//{ $PHPprotectV23 = preg_replace("/[^0-9]/", "", $_GET['wordID']);
-
-//	if(strlen($PHPprotectV23) != 1){
-
-//	echo "ERROR: Hack Attempt, after filtration the variable is empty."; exit(); }
-
-
-
-$link->set_charset("utf8");
-
-
-
-
-
-
-
-?>
-
-
+  <div class='container-fluid' style='width: auto; margin-top:36px; margin-bottom:48px;'>
     <div class="row" id='tableRsult' name='tableRsult' class='table table-hover stable-condensed' style="width: auto;">
 
+            <?php include ("searchSemantic.php");?>
 
 
-        <!--  style='position: fixed;  top: 48px;'> margin-top:38px; margin-bottom:48px; margin-left:150px; -->
 
-
-
-        <div class="col-xs-3 col-md-5" style=" margin-top:220px; position:fixed; z-index:1; ">
-
-            <div  class="pre-scrollable" style="width: 260px; height: 210px;">
-
-
-
-
-
-
-
-
-
-
-
-  <?php
-
-
-
-
-
- $link->set_charset("utf8");
-
-
-
-//$PHPprotectV22 = "";
-
-
-
-
-
-
-
-        if(!empty($_GET['sd'])){
-
-
-
-            $PHPprotectV23 = $_GET['sd'];
-
-
-
-//        if(isset($_GET['letter']) && strlen($_GET['letter']) == 1) {
-
-//    $PHPprotectV22 = $_GET['letter'];
-
-  //  $PHPprotectV23 = preg_replace('#[^a-z]#i', '', $_GET['letter']);
-
-	//if(strlen($PHPprotectV23) != 1){
-
-//	echo "ERROR: Hack Attempt, after filtration the variable is empty."; exit(); }
-
-
-
-
-
- //Gravando atividade do usuário
-
-
-
-     $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
-
-    $_SESSION['loginTime'] = date("Y-m-d h:i:s");
-
-    $_SESSION['letter'] = $PHPprotectV23;
-
-    $ip = $_SESSION['ip'];
-
-    $loginTime = $_SESSION['loginTime'];
-
-    $username =$_SESSION['username'];
-
-
-
-    $sql = "INSERT INTO users_activities (`username`, `activity`, `item`, `ip`) VALUES ('$username', 'search alphabetic', '$PHPprotectV23', '$ip')";
-
-
-
-            $query = mysqli_query($link, $sql);
-
-
-
-
-
-
-
-
-
-$sql="SELECT * FROM word_por WHERE semantic_domain  = '$PHPprotectV23' ORDER BY word_por";
-
-
-
-
-
-
-
-
-
-if($result = mysqli_query($link, $sql)){
-
-    if(mysqli_num_rows($result)>0){
-
-     $id="";
-
-        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-
-//            $count++;
-
-//            echo "<p>Row number: $count</p>";
-
-//            print_r($row);
-
-            ?>
-
-
-
-        <tr>
-
-            <?php
-
-
-
-            if($id!=$row["word_id"]){
-
-
-
-                               $id=$row["word_id"];
-
-                $word_por= $row["word_por"];
-
-                $sd= $row["semantic_domain"];
-
-
-
-
-                ?>
-
-                <td><a href='wordDetailView.php?wordID=<?php echo "$id"; ?>&sd=<?php echo "$sd"; ?>&orign=2'><big><b><?php echo "$word_por"; ?></b></big></a><small> <?php echo "$word_class"; ?></small> <i><?php echo "$gloss_pt"; ?></i><br></td>
-
-
-
-            <?php
-
-
-
-            }
-
-            else{
-
-
-
-             }
-
-            ?>
-
-            </tr>
-
-
-
-<?php
-
-
-
-            }
-
-
-
-            ?>
-
-                </div>
-
-        </div>
-
-
-
-            <?php
-
-        //close the result set
-
-        mysqli_free_result($result);
-
-    }else{
-
-        echo "<p>Não foram encontrados resultados para a busca.</p>";
-
-    }
-
-
-
-    }else{
-
-    echo "<p>Não foi possível executar: $sql. " . mysqli_error($link) ."</p>";
-
-} }
-
-?>
-
-        </div>
                 <!-- incluir div com mapa dos dialetos e línguas Yanomami -->
 
         <?php include ("dialetosYanomami.php");?>
 
 
-
+        <?php include ("legenda.php");?>
 
 
         </div>
 
     </div>
-
-</div>
-
-
-
-
-
-
-
 
 <?php
 
@@ -403,6 +126,8 @@ include('bottonDic.php');
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 <script src="js/login.js"></script>
+<script src="js/legenda.js"></script>
+<script src="js/path.js"></script>
 
 </body>
 
