@@ -119,6 +119,7 @@ include('bottonDic.php');
 <script src="js/login.js"></script>
 <script src="js/legenda.js"></script>
 <script src="js/path.js"></script>
+<script src="js/sound.js"></script>
 
 
 

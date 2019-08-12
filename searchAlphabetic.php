@@ -11,7 +11,7 @@
                               <button style='float:left;' onclick="window.location = ('searchSemanticView.php?sd=animais')" class="btn btn-success btn-sm">Campos Semânticos</button>
                           </div>
 
-<div class="pre-scrollable list-group" style="width: 260px; height: 210px; margin-top: 36px; margin-left:0px; position:relative; z-index:5; border-width:0px;">
+<div class="pre-scrollable list-group" style="width: 260px; height: 210px; margin-top: 36px; margin-left:0px; position:relative; z-index:6; border-width:0px;">
 
 
 
@@ -27,9 +27,9 @@ $PHPprotectV23 = $_GET['wordID'];
 
 //if(isset($_GET['wordID']) && strlen($_GET['wordID']) == 1)
 
-//{ $PHPprotectV23 = preg_replace("/[^0-9]/", "", $_GET['wordID']);
+//{ $firstLetter = preg_replace("/[^0-9]/", "", $_GET['wordID']);
 
-//	if(strlen($PHPprotectV23) != 1){
+//	if(strlen($firstLetter) != 1){
 
 //	echo "ERROR: Hack Attempt, after filtration the variable is empty."; exit(); }
 
@@ -72,7 +72,7 @@ if(!empty($_GET['letter'])){
 
 
 
-$PHPprotectV23 = $_GET['letter'];
+$firstLetter = $_GET['letter'];
 
 
 
@@ -80,9 +80,9 @@ $PHPprotectV23 = $_GET['letter'];
 
 //    $PHPprotectV22 = $_GET['letter'];
 
-//  $PHPprotectV23 = preg_replace('#[^a-z]#i', '', $_GET['letter']);
+//  $firstLetter = preg_replace('#[^a-z]#i', '', $_GET['letter']);
 
-//if(strlen($PHPprotectV23) != 1){
+//if(strlen($firstLetter) != 1){
 
 //	echo "ERROR: Hack Attempt, after filtration the variable is empty."; exit(); }
 
@@ -98,7 +98,7 @@ $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
 
 $_SESSION['loginTime'] = date("Y-m-d h:i:s");
 
-$_SESSION['letter'] = $PHPprotectV23;
+$_SESSION['letter'] = $firstLetter;
 
 $ip = $_SESSION['ip'];
 
@@ -108,7 +108,7 @@ $username =$_SESSION['username'];
 
 
 
-$sql = "INSERT INTO users_activities (`username`, `activity`, `item`, `ip`) VALUES ('$username', 'search alphabetic', '$PHPprotectV23', '$ip')";
+$sql = "INSERT INTO users_activities (`username`, `activity`, `item`, `ip`) VALUES ('$username', 'search alphabetic', '$firstLetter', '$ip')";
 
 
 
@@ -202,7 +202,7 @@ $sql="SELECT * FROM word_por WHERE LEFT (word_por, 1) = 'i' COLLATE utf8_bin OR 
 
 
 
-$sql="SELECT * FROM word_por WHERE LEFT (word_por, 1)  = '$PHPprotectV23' ORDER BY word_por";
+$sql="SELECT * FROM word_por WHERE LEFT (word_por, 1)  = '$firstLetter' ORDER BY word_por";
 
 
 

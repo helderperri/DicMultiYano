@@ -20,7 +20,7 @@
 
       </div>
 
-<div class="pre-scrollable list-group" style="width: 260px; height: 210px; margin-top: 106px; margin-left: 0px; align-items: left; position:relative; z-index: 5; border-width:0px;">
+<div class="pre-scrollable list-group" style="width: 260px; height: 210px; margin-top: 106px; margin-left: 0px; align-items: left; position:relative; z-index: 6; border-width:0px;">
 
 
 
@@ -88,7 +88,7 @@ if(!empty($_GET['sd'])){
 
 
 
-$PHPprotectV23 = $_GET['sd'];
+$semanticDomain = $_GET['sd'];
 
 
 
@@ -96,9 +96,9 @@ $PHPprotectV23 = $_GET['sd'];
 
 //    $PHPprotectV22 = $_GET['letter'];
 
-//  $PHPprotectV23 = preg_replace('#[^a-z]#i', '', $_GET['letter']);
+//  $semanticDomain = preg_replace('#[^a-z]#i', '', $_GET['letter']);
 
-//if(strlen($PHPprotectV23) != 1){
+//if(strlen($semanticDomain) != 1){
 
 //	echo "ERROR: Hack Attempt, after filtration the variable is empty."; exit(); }
 
@@ -114,7 +114,7 @@ $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
 
 $_SESSION['loginTime'] = date("Y-m-d h:i:s");
 
-$_SESSION['letter'] = $PHPprotectV23;
+$_SESSION['letter'] = $firstLetter;
 
 $ip = $_SESSION['ip'];
 
@@ -124,7 +124,7 @@ $username =$_SESSION['username'];
 
 
 
-$sql = "INSERT INTO users_activities (`username`, `activity`, `item`, `ip`) VALUES ('$username', 'search alphabetic', '$PHPprotectV23', '$ip')";
+$sql = "INSERT INTO users_activities (`username`, `activity`, `item`, `ip`) VALUES ('$username', 'search alphabetic', '$firstLetter', '$ip')";
 
 
 
@@ -138,7 +138,7 @@ $query = mysqli_query($link, $sql);
 
 
 
-$sql="SELECT * FROM word_por WHERE semantic_domain  = '$PHPprotectV23' ORDER BY word_por";
+$sql="SELECT * FROM word_por WHERE semantic_domain  = '$semanticDomain' ORDER BY word_por";
 
 
 

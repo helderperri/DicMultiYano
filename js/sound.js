@@ -6,6 +6,8 @@ var word_id = document.getElementById("word_id").textContent;
 //var scroll = document.getElementsByClassName("pre-scrollable")
 var word_sel = document.getElementById(word_id);
 word_sel.scrollIntoViewIfNeeded();
+//word_sel.css("class", "list-group-item list-group-item-action active");
+
 //element.scrollIntoView();
 //word_sel.scrollIntoView();
 
