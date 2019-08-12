@@ -8,7 +8,6 @@ session_start();
 
 //}
 
-session_start();
 
 //conect to the database
 
@@ -81,7 +80,7 @@ $link->set_charset("utf8");
 
   <?php include('navView.php');?>
 
-  <div class='container-fluid' style='width: auto; margin-top:36px; margin-bottom:48px;'>
+  <div class='container-fluid' style='width: auto; margin-top:36px; margin-bottom:36px; padding-bottom: 36px;'>
     <div class="row" id='tableRsult' name='tableRsult' class='table table-hover stable-condensed' style="width: auto;">
 
                                 <?php include ("searchAlphabetic.php");?>

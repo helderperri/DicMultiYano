@@ -1,4 +1,4 @@
-  <div class="col-lg-auto" style="margin-top:28px; z-index: 4; margin-bottom:48px; margin-left: 200px; display: inline-block; position: relative">
+  <div class="col-lg-auto" style="margin-top:56px; z-index: 4; margin-bottom:48px; margin-left: 200px; display: inline-block; position: relative">
 <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 width="720" viewBox="0 0 904 810" enable-background="new 0 0 904 810" xml:space="preserve">
 <!-- verificar como usar e por que
