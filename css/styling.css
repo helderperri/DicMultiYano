@@ -39,21 +39,24 @@ path:hover{
 */
 a.lingua span{
   min-height: auto;
-  margin-top: 4px;
+  margin-top: 12px;
   margin-bottom: 2px;
   color: black;
   min-width: auto;
+  font-size: 1.1em;
 }
 a.dialeto span{
   min-height: auto;
   margin-top: 2px;
   margin-bottom: 2px;
+  margin-right: 20px;
   color: black;
   min-width: auto;
 }
 
 a.lingua {
   min-height: auto;
+  margin-right: 0px;
   margin-top: 4px;
   margin-bottom: 2px;
   width: 0px;
@@ -81,6 +84,11 @@ a.dialeto {
 }
 */
 
+g a:hover{
+    text-decoration: none;
+
+
+}
 a.list-group-item {
   color: blue;
       margin-top:0px;
@@ -173,9 +181,9 @@ text {
 /*Style the footer*/
 .footer{
     position: absolute;
-    bottom: 0;
+    bottom: 28px;
     text-align: center;
-    margin-top: 10px;
+/*    margin-top: 10px;*/
     width: 100%;
   }
 
